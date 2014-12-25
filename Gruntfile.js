@@ -219,6 +219,19 @@ module.exports = function (grunt) {
             dist: ['compass:dist']
         }, //end concurrent
 
+        //as noted
+        uglify: {
+            dist: {
+                options: {
+                    mangle: false
+                },
+                files: {
+                    '<%= beertrail.dist %>/scripts/thirdparty.js': ['<%= beertrail.dist %>/scripts/thirdparty.js'],
+                    '<%= beertrail.dist %>/scripts/vermont-beertrail.js': ['<%= beertrail.dist %>/scripts/vermont-beertrail.js']
+                }
+            }
+        }, //end uglify
+
         //Turn HTML Partials into script tags in index.html
         inline_angular_templates: {
             dist: {
@@ -259,7 +272,7 @@ module.exports = function (grunt) {
         'concurrent:dist',
         'concat',
         'copy:dist',
-        // 'uglify',
+        'uglify',
         'cssmin',
         'filerev',
         'usemin',
