@@ -1,0 +1,17 @@
+.businessmap {
+    @extend .googlemap;
+    &-header {
+        @extend .googlemap-header;
+        text-align: center;
+        &-text {
+            @extend .googlemap-header-text;
+            @include span(12 of 12);
+            text-align: center;
+            &-small {
+                @extend .googlemap-header-text-small;
+                @include span(12 of 12);
+                text-align: center;
+            }
+        }
+    }
+}

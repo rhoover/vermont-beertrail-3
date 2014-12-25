@@ -1,0 +1,70 @@
+.googlemap {
+    display: block;
+    margin-top: rhythm(-.01, 16px);
+    @extend %inside-view;
+    height: rhythm(24, 16px);
+    overflow: visible !important;
+    z-index: 25;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        $bleed: span(6)+gutter(3.5);
+        @include bleed-x($bleed);
+        height: 100vh;
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        $bleed: span(10)+gutter(1.7);
+        @include bleed-x($bleed);
+    }
+    &-header {
+        @extend %inside-view;
+        margin-top: rhythm(-1, 16px);
+        min-height: rhythm(2.6, 16px);
+        border-bottom: .1em solid $green;
+        background-color: $attribution;
+        z-index: 25;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            $bleed: span(6)+gutter(3.5);
+            @include bleed-x($bleed);
+        }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            $bleed: span(10)+gutter(1.7);
+            @include bleed-x($bleed);
+        }
+        &-image {
+            @extend %lists-image;
+            margin-top: rhythm(.5, 16px);
+            @include susy-breakpoint($bp-medium, $columns-medium) {
+                margin-left: span(3 of 18);
+            }
+            @include susy-breakpoint($bp-large, $columns-large) {
+                @include span(3 of 24);
+                margin-left: span(9 of 24);
+            }
+        }
+        &-text {
+            @include span(9 of 12);
+            @include type-scale(small);
+            @include type-weight(bold);
+            margin: rhythm(.75, 16px) 0 0 0;
+            color: $black;
+            margin-bottom: 0;
+            @include susy-breakpoint($bp-medium, $columns-medium) {
+                @include span(9 of 18);
+            }
+            @include susy-breakpoint($bp-large, $columns-large) {
+                @include span(12 of 24);
+            }
+            &-small {
+                @include span(9 of 12);
+                @include type-scale(small);
+                margin: 0 0 rhythm(.75, 16px);
+                color: $black;
+                @include susy-breakpoint($bp-medium, $columns-medium) {
+                    @include span(9 of 18);
+                }
+                @include susy-breakpoint($bp-large, $columns-large) {
+                    @include span(12 of 24);
+                }
+            }
+        }
+    }
+}

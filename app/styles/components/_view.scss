@@ -1,0 +1,12 @@
+.view {
+    min-height: 100vh;
+    @include span(12 wide of 12 no-gutters);
+    padding: rhythm(3.7, 16px) span(1) 0;
+    @include translateZ(5);
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        padding: rhythm(3.7, 16px) span(4 of 18) rhythm(1, 16px);
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        padding: rhythm(3.7, 16px) span(6 of 24) rhythm(1, 16px);
+    }
+}

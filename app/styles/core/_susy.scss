@@ -1,0 +1,22 @@
+// Susy Core
+$susy: (
+    global-box-sizing: border-box,
+    columns: 12,
+    gutters: .25,
+    gutter-position: split,
+    debug: (
+        image: hide
+        )
+);
+
+// Susy Vars
+@include border-box-sizing;
+$columns-small: layout(12);
+$columns-medium: layout(18);
+$columns-large: layout(24);
+
+// Breakpoint Vars
+// $bp-small : max-width 37.5em;
+// $bp-medium : (min-width 37.5em) (max-width 64em);
+$bp-medium : (min-width 37.5em); //(max-width 74em)
+$bp-large : min-width 74em;

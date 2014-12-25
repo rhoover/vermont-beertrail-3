@@ -1,0 +1,128 @@
+.yelp {
+    &-attribution {
+        @extend %attribution;
+        min-height: rhythm(1, 16px);
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            $bleed: span(6)+gutter(4);
+            @include bleed-x($bleed);
+        }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            $bleed: span(10)+gutter(1.7);
+            @include bleed-x($bleed);
+            text-align: left;
+        }
+        &-link {
+            @include span(9 of 12);
+            @include type-scale(small);
+            padding-top: rhythm(.25, 16px);
+            @include susy-breakpoint($bp-large, $columns-large) {
+                @include span(6 of 24);
+            }
+        }
+    }
+    &-list-item {
+        @extend %lists;
+        @include susy-breakpoint($bp-large, $columns-large) {
+          min-height: rhythm(7, 16px);
+          padding-left: 0;
+        }
+        &-image {
+            @extend %lists-image;
+            width: 60px;
+            height: 60px;
+            @include susy-breakpoint($bp-large, $columns-large) {
+                @include span(4 of 24);
+            }
+        }
+        &-details {
+            @extend %lists-detail;
+            &-small {
+                @extend %lists-detail-small;
+                margin-top: 0;
+                @include type-scale(small);
+            }
+        }
+    }
+}
+.brewer40-yelp {
+    @include span(3 of 12);
+    height: 25px;
+    width: 50px;
+}
+
+//Courtesy of http://hugogiraudel.com/2014/02/24/star-rating-system-with-sass/
+.rating {
+    @extend %lists-detail;
+    &-small {
+        @include type-scale(tiny);
+    }
+}
+
+$yelp-font-size: 11px;
+$star-width: rhythm(.4, 16px);
+$max-stars: 5;
+$bg-color: rgb(224, 224, 224);
+
+.rating i {
+  display: inline-block;
+  width: 0;
+  height: $star-width;
+  padding-bottom: rhythm(.55, 16px);
+  padding-top: rhythm(.07, 16px);
+  border-width: 0 ( $star-width / 1.2);
+  border-style: solid;
+  border-color: $bg-color;
+  border-radius: .22em;
+  color: white;
+  background: $bg-color;
+  font-style: normal;
+  line-height: $star-width + 0.1em;
+  text-indent: -0.46em;
+  text-shadow: 1px 0 1px hsl(0, 0%, 70%);
+}
+// Revamping the stars-color function
+// To use a list and some logic
+// In order to avoid repeted code
+// Also add a fallback color, just in case (#333)
+@function stars-color($stars) {
+  @if type-of($stars) != number {
+    @warn '#{$stars} is not a number for `stars-color`.';
+    @return false;
+  }
+  $colors: #cc8b1f #dcb228 #f0991e #f26a2c #dd050b;
+  @return if($stars <= length($colors), nth($colors, $stars), #333);
+}
+// Main loop, looping through 1 to 4 (instead of 5)
+// 1. Instanciating a list that will be used as a CSS selector
+// 2. Caching the return from stars-color to speed up compilation
+@for $i from 1 to $max-stars {
+  $selector: (); // 1
+  $color: stars-color($i); // 2
+  // Inner loop not dumping anything
+  // 1. Only appending stuff to $selector
+  // 2. Using the [attr^='X'] selector to target both X and X.Y
+  // 3. Forcing comma separated list for the selector to work
+  @for $j from 1 through $i {
+    $selector: append(
+      $selector, // 1
+      unquote("[data-rating^='#{$i}'] .star-#{$j}"), // 2
+      comma // 3
+    );
+  }
+  // Using the concatenated selector
+  #{$selector} {
+    border-color: $color;
+    background: $color;
+  }
+  // For half ratings only, applying color to left border of next star
+  [data-rating='#{$i + 0.5}'] .star-#{$i + 1} {
+    border-left-color: $color;
+  }
+}
+// Dealing with 5-stars rating in a very simple way
+// Since there is no 5.5 rating possible
+$color: stars-color($max-stars);
+[data-rating='#{$max-stars}'] i {
+  border-color: $color;
+  background: $color;
+}

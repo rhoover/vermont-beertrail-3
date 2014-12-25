@@ -1,0 +1,242 @@
+%font-helpers {
+    font-kerning: normal;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+%nav-buttons {
+    @include span(2 of 12);
+    padding-top: rhythm(.25, 16px);
+    cursor: pointer;
+    text-align: center;
+    @include adjust-font-size-to(28px);
+    text-decoration: none;
+    color: $yellow-lite;
+    text-shadow: 0 0 1px $black-dark;
+    &:active {
+        text-shadow: 0 0 1px $black, 0 0 1em $white;
+    }
+}
+
+%intro-links {
+    @include span(50%);
+    margin: 0;
+    text-align: center;
+    &:focus {
+        background-color: $green-light;
+    }
+    &:active {
+        background-color: $green-light;
+    }
+}
+
+%lists {
+    @include span(12 wide of 12 no-gutters);
+    padding: rhythm(1, 16px) 0px;
+    border-bottom: .1em solid $grey-blue;
+    text-decoration: none;
+    position: relative;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(18 wide of 18 no-gutters);
+        padding-left: span(3 of 18);
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        @include span(8 of 24 no-gutters);
+        //expando-hover
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            bottom: 0px;
+            left: 0px;
+            background-color: rgba($grey-blue, .1);
+            visibility: hidden;
+            @include scaleX(0);
+            @include transition-property(all);
+            @include transition-duration(0.3s);
+            @include transition-timing-function(ease-in-out);
+        }
+        &:hover {
+            @include type-weight(bold);
+            &:after {
+                visibility: visible;
+                @include scaleX(1);
+            }
+        }
+    }
+    &:focus {
+        background-color: rgba($grey-blue, .25);
+    }
+    &:active {
+        background-color: rgba($grey-blue, .25);
+    }
+
+    &-detail {
+        @include span(last 9 of 12);
+        @include type-scale(base);
+        color: $black;
+        &-small {
+            @include span(last 9 of 12);
+            @include type-scale(tiny);
+            color: $black;
+        }
+    }
+
+    &-image {
+        @include span(3 of 12);
+        height: 40px;
+        margin-right: 0;
+    }
+}
+
+%attribution {
+    $bleed: span(1)+gutter(13);
+    @include bleed-x($bleed);
+    padding: rhythm(.5, 16px);
+    margin-top: rhythm(-1, 16px);
+    text-align: center;
+    background-color: $attribution;
+    border-bottom: .1em solid $grey-blue-lite;
+    a {
+        @include type-scale(small);
+        text-decoration: none;
+        color: $black;
+    }
+}
+
+%inside-view {
+    $bleed: span(1)+gutter(12);
+    @include bleed-x($bleed);
+
+    &-medium {
+        $bleed: span(3)+gutter(13);
+        @include bleed-x($bleed);
+    }
+}
+
+%responsive-trigger {
+    &::after {
+        content: "phone";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: -1000px;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            content: "tablet";
+        }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            content: "computer";
+        }
+    }
+}
+
+// Animate faux text-underline courtesy: http://tobiasahlin.com/blog/css-trick-animating-link-underlines/
+%detail-button {
+        position: relative;
+        @include span(12 of 12 no-gutters);
+        margin-top: rhythm(1, 16px);
+        text-align: center;
+        color: $black;
+        text-decoration: none;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            @include span(18 of 18 no-gutters);
+        }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            @include span(10 of 24 no-gutters);
+            margin-left: span(1 of 24);
+            padding: rhythm(2, 16px) 0;
+            border-radius: .25em;
+            border: solid .1em rgba($grey-blue, .75);
+            &:nth-of-type(odd) {
+                margin-left: span(2.25 of 24);
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                bottom: 0px;
+                left: 0px;
+                background-color: rgba($grey-blue, .1);
+                visibility: hidden;
+                @include scaleX(0);
+                @include transition-property(all);
+                @include transition-duration(0.3s);
+                @include transition-timing-function(ease-in-out);
+            }
+            &:hover {
+                @include type-weight(bold);
+                border: solid .1em $grey-blue;
+                &:after {
+                    visibility: visible;
+                    @include scaleX(1);
+                }
+            }
+        }
+        &:before { //icon stuff
+            float: left;
+            padding-left: span(3 of 12);
+            color: $grey-blue;
+            @include susy-breakpoint($bp-medium, $columns-medium) {
+                padding-left: span(7 of 18);
+            }
+            @include susy-breakpoint($bp-large, $columns-large) {
+                padding-left: span(7 of 24);
+            }
+        }
+        &:active {
+            background-color: rgba($grey-blue, .25);
+        }
+        &:focus {
+            background-color: rgba($grey-blue, .25);
+        }
+   }
+
+%scroller-button {
+    position: fixed;
+    z-index: 15;
+    right: span(.5 of 12);
+    bottom: rhythm(3, 16px);
+    width: span(2 of 12 no-gutters);
+    height: rhythm(2.3, 16px);
+    background: rgba($grey-blue, .10);
+    border-radius: 100%;
+    border: .1em solid rgba($grey-blue, .3);
+    cursor: pointer;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        width: span(1.4 of 18);
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        right: span(2 of 24);
+        width: span(1 of 24);
+    }
+    &:hover {
+        border: .1em solid rgba($grey-blue, .75);
+        background: rgba($grey-blue, .30);
+        &:before {
+            border-top: .3em solid rgba($grey-blue, .75);
+            border-left: .3em solid rgba($grey-blue, .75);
+        }
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 20px;
+        left: 14px;
+        @include rotate(45deg);
+        background: transparent;
+        border-top: .3em solid rgba($grey-blue, .3);
+        border-left: .3em solid rgba($grey-blue, .3);
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            left: 14px;
+        }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            top: 19px;
+            left: 15px;
+        }
+    }
+}

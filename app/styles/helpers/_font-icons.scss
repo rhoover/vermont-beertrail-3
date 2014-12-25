@@ -1,0 +1,40 @@
+// Courtesy: http://jaydenseric.com/blog/fun-with-sass-and-font-icons
+$icons: (
+    'home' '\e000',
+    'phone' '\e001',
+    'map' '\e002',
+    'back' '\e003',
+    'weather' '\e005',
+    'shopping' '\e008',
+    'dining' '\e009'
+);
+@function match($haystack, $needle) {
+    @each $item in $haystack {
+        $index: index($item, $needle);
+        @if $index {
+            $return: if($index == 1, 2, $index);
+            @return nth($item, $return);
+        }
+    }
+    @return false;
+}
+@mixin icon($position: 'before', $styles: true, $icon: false) {
+    // Either a :before or :after pseudo-element, defaulting to :before
+    &:#{$position} {
+        @if $icon {
+            // Icon has been specified
+            content: match($icons, $icon);
+        }
+        @if $styles {
+            // Supportive icon styles have been specified
+            font: {
+                family: $BeerTrail;
+            }
+            @include adjust-font-size-to(20px);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        // Include any extra rules supplied for the pseudo-element
+        @content;
+    }
+}

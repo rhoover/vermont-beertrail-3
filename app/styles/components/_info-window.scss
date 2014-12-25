@@ -1,0 +1,5 @@
+.info-window {
+    &-text {
+        @include type-scale(tiny);
+    }
+}

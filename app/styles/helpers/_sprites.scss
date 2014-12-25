@@ -1,0 +1,4 @@
+@import "brewer40/*.png";
+$brewer40-layout: smart;
+// $brewer40-sprite-dimensions: true;
+@include all-brewer40-sprites;

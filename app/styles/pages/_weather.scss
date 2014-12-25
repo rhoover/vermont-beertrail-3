@@ -1,0 +1,52 @@
+.weather {
+    &-attribution {
+        @extend %attribution;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            $bleed: span(6)+gutter(2.3);
+            @include bleed-x($bleed);
+        }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            $bleed: span(10)+gutter(1.7);
+            @include bleed-x($bleed);
+            text-align: left;
+        }
+    }
+    &-header {
+        margin-top: rhythm(1, 16px);
+        padding: rhythm(.25, 16px) 0;
+        @include type-scale(medium);
+        text-align: center;
+        color: $black;
+        border-bottom: .05em solid $grey-blue;
+        @include susy-breakpoint($bp-large, $columns-large) {
+            text-align: left;
+        }
+    }
+    &-forecast {
+        margin-top: rhythm(1, 16px);
+        @include span(12 of 12);
+        @extend .weather-header;
+        padding-top: 0px;
+        border-top: none;
+    }
+    &-description {
+        margin-top: rhythm(.5, 16px);
+        @include span(last 8 of 12);
+        @include type-scale(base);
+        color: $black;
+    }
+    &-skycons {
+        margin-top: rhythm(.5, 16px);
+        @include span(4 of 12);
+        height: 64px;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            @include span(3 of 18);
+            margin-left: span(3 of 18);
+            margin-top: rhythm(.5, 16px);
+        }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            @include span(3 of 24);
+            margin-left: span(3 of 24);
+        }
+    }
+}

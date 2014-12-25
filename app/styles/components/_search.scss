@@ -1,0 +1,28 @@
+.search {
+    &-input {
+        @include span(12 wide of 12 no-gutters);
+        @include type-scale(medium);
+        padding-left: span(.5);
+        background: transparent;
+        border-top: transparent;
+        border-style: solid;
+        border-color: $grey-blue-lite;
+        border-width: 0 0 .1em 0;
+        &:focus {
+            outline: none;
+            border-width: 0 0 .3em 0;
+            &::-webkit-input-placeholder {
+                color: transparent;
+            }
+            &::-moz-input-placeholder {
+                color: transparent;
+            }
+            &:-ms-input-placeholder {
+                color: transparent;
+            }
+        }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            margin-bottom: rhythm(1, 16px);
+        }
+    }
+}

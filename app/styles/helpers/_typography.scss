@@ -1,0 +1,101 @@
+$base-font-size: 16px;
+$base-line-height: 24px;
+$relative-font-sizing: true;
+$round-to-nearest-half-line: true;
+@include establish-baseline;
+
+//Typographic Scale courtesy of: https://github.com/andrejmlinarevic/typomatic
+$type-prefix: "t-";
+
+$type-scale: (
+    tiny: (
+        font-size: 9px,
+        base-lines: 0.563
+        ),
+    small: (
+        font-size: 12px,
+        base-lines: 0.75
+        ),
+    base: (
+        font-size: 16px,
+        base-lines: 1
+        ),
+    medium: (
+        font-size: 21px,
+        base-lines: 1.333
+        ),
+    large: (
+        font-size: 28px,
+        base-lines: 1.777
+        ),
+    xlarge: (
+        font-size: 38px,
+        base-lines: 2.369
+        ),
+);
+
+$type-weight: (
+    thin: 200,
+    light: 300,
+    regular: 400,
+    bold: 700,
+    black: 900
+);
+
+// // An easy way to fetch a deep value in a multi-level map. Works much like
+// // map-get() except that you pass multiple keys as the second parameter to
+// // go down multiple levels in the nested map.
+// //
+@function map-fetch($map, $keys) {
+    $key: nth($keys, 1);
+    $length: length($keys);
+    $value: map-get($map, $key);
+    @if ($length > 1) {
+        $rest: ();
+        @for $i from 2 through $length {
+            $rest: append($rest, nth($keys, $i))
+        }
+        @return map-fetch($value, $rest)
+    } @else {
+        @return $value;
+    }
+}
+
+//  // Each loop that outputs all of the type scales as placeholders with their type-prefix
+//  // ex. %t-tiny, %t-small
+@each $scale in map-keys($type-scale) {
+    %#{$type-prefix}#{$scale} {
+        @include adjust-font-size-to (
+            map-fetch($type-scale, $scale font-size),
+            map-fetch($type-scale, $scale base-lines)
+        );
+    }
+}
+
+// // A mixin for using type scale
+// // Parameters:
+// // $scale (tiny, small...)
+// // $extend (boolean) - true by default, if needed inside media query use false to @include the content instead of @extend
+// // ex. @include type-scale(small) or @include type-scale(small, false) for use inside media queries.
+
+// @mixin type-scale($scale, $extend: true, $map: $type-scale) {
+    // @if $extend {
+    //     @extend %#{$type-prefix}#{$scale};
+    // }
+    // @else {
+    //     @include adjust-font-size-to(
+    //         map-fetch($map, $scale font-size),
+    //         map-fetch($map, $scale base-lines)
+    //     );
+    // }
+@mixin type-scale($scale, $map: $type-scale) {
+    $font-size: map-fetch($map, $scale font-size);
+    $base-lines: map-fetch($map, $scale base-lines);
+    @include adjust-font-size-to($font-size, $base-lines);
+};
+
+// // A simple type-weight mixin
+// // ex. @include type-weight(strong);
+@mixin type-weight($weight) {
+    font-weight: map-get($type-weight, $weight);
+};

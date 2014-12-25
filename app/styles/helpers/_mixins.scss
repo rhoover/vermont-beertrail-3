@@ -1,0 +1,5 @@
+@mixin lob-owl {
+    > * + * {
+        margin-top: rhythm(1, 16px);
+    }
+}

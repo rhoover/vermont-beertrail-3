@@ -1,0 +1,73 @@
+.home {
+    @include lob-owl();
+    &-description {
+        text-align: center;
+        color: $white;
+        @include type-scale(base);
+            @include susy-breakpoint($bp-medium, $columns-medium) {
+                color: $black;
+            }
+    }
+    &-header {
+        @extend %inside-view;
+        @include type-scale(large);
+        text-align: center;
+        color: $white;
+        border-top: .1em solid $grey-blue-lite;
+        border-bottom: .1em solid $grey-blue-lite;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            $bleed: span(6)+gutter(4);
+            @include bleed-x($bleed);
+            @include type-scale(large);
+            color: $black;
+            border-top: .1em solid $grey-blue-lite;
+            border-bottom: .1em solid $grey-blue-lite;
+        }
+    }
+    &-choose {
+        @include span(12 wide of 12 no-gutters);
+        margin-top: rhythm(1, 16px);
+        background-color: $green;
+        @include background-image(linear-gradient($green-light, $green));
+        border-radius: .25em;
+        border: .1em solid $black-dark;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            @include span(14 wide of 18 no-gutters);
+            margin-left: span(2 of 18);
+            margin-right: span(2 of 18);
+        }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            @include span(12 of 24);
+            margin-left: span(6 of 24);
+            margin-right: span(6 of 24);
+        }
+        &-link {
+            padding: rhythm(.5, 16px) gutter(6);
+            @include type-scale(small);
+            text-decoration: none;
+            color: $white;
+            text-shadow: 0px 0px 1px $black;
+            &-left {
+                @extend %intro-links;
+                border-right: .1em solid $black;
+            }
+            &-right {
+                @extend %intro-links;
+            }
+            @include susy-breakpoint($bp-medium, $columns-medium) {
+                @include type-scale(base);
+            }
+        }
+    }
+    &-caveat {
+        display: none;
+        @include susy-breakpoint($bp-large, $columns-large) {
+            display: block;
+            @include span(24 wide of 24 no-gutters);
+            margin-top: rhythm(1, 16px);
+            @include type-scale(small);
+            text-align: center;
+            color: $black;
+        }
+    }
+}

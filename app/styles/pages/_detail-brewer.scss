@@ -1,0 +1,52 @@
+.brewerdetail {
+    &-image {
+        @extend %responsive-trigger;
+        display: block;
+        margin: 0 auto;
+    }
+    &-header {
+        margin-top: rhythm(.75, 16px);
+        text-align: center;
+        color: $black;
+        @include type-scale(medium);
+    }
+    &-small {
+        text-align: center;
+        @include type-scale(small);
+        margin-top: 0px;
+    }
+    &-button {
+        &-map {
+            @extend %detail-button;
+            @include icon('before', true, 'map');
+        }
+        &-phone {
+            @extend %detail-button;
+            @include icon('before', true, 'phone');
+        }
+        &-shopping {
+            @extend %detail-button;
+            @include icon('before', true, 'shopping');
+        }
+        &-dining {
+            @extend %detail-button;
+            @include icon('before', true, 'dining');
+        }
+        &-weather {
+            @extend %detail-button;
+            @include icon('before', true, 'weather');
+        }
+    }
+    &-linktext {
+        @include type-scale(base);
+        text-align: left;
+        padding-left: span(4.5 of 12);
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            padding-left: span(9 of 18);
+        }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            padding-left: span(6 of 24);
+            text-align: center;
+        }
+    }
+}
