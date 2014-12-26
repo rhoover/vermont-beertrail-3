@@ -9,12 +9,12 @@
 
         var directiveOptions = {
             link: link,
-            restrict: 'A'
+            restrict: 'A',
+            scope: {}
         };
         return directiveOptions;
 
         ////////////////
-
 
         function link(scope, element, attrs) {
 
