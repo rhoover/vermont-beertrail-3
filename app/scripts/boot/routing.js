@@ -5,6 +5,11 @@
         .config(routing);
 
         function routing($routeProvider) {
+
+            var brewers = function (resolveBrewers) {
+                return resolveBrewers.brewers();
+            };
+
             $routeProvider
                 .when('/', {
                     templateUrl: 'views/home.html'
@@ -13,9 +18,9 @@
                     templateUrl: 'views/brewer-list.html',
                     controller: 'ListBrewerCtrl',
                     controllerAs: 'lbC',
-                    // resolve: {
-                    //     brewers: brewers
-                    // }
+                    resolve: {
+                        brewers: brewers
+                    }
                 })
                 .when('/brewermap', {
                     templateUrl: 'views/brewer-statewide-map.html',

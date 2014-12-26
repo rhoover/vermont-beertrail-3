@@ -13,6 +13,8 @@
         };
         return directiveOptions;
 
+        ////////////////
+
         function link(scope, element, attrs) {
             element.on('click', function () {
                 scope.$apply(function () {

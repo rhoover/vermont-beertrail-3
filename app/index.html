@@ -82,10 +82,10 @@
     <!-- endbuild -->
 
     <!-- build:js(.) scripts/angular-min.js -->
-        <script src="libs/angular/angular.min.js"></script>
-        <script src="libs/angular-animate/angular-animate.min.js"></script>
-        <script src="libs/angular-touch/angular-touch.min.js"></script>
-        <script src="libs/angular-route/angular-route.min.js"></script>
+        <script src="libs/angular/angular.js"></script>
+        <script src="libs/angular-animate/angular-animate.js"></script>
+        <script src="libs/angular-touch/angular-touch.js"></script>
+        <script src="libs/angular-route/angular-route.js"></script>
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/vermont-beertrail.js -->
@@ -97,9 +97,19 @@
          <script src="scripts/boot/url-hash.js"></script>
          <script src="scripts/boot/debug-markup.js"></script>
 
+         <script src="scripts/services/keys/brewer-cache-key.js"></script>
+
          <script src="scripts/utilities/button-home-directive.js"></script>
          <script src="scripts/utilities/button-back-directive.js"></script>
+         <script src="scripts/utilities/scroll-to-top-directive.js"></script>
          <script src="scripts/utilities/home/home-mobile-directive.js"></script>
+
+        <script src="scripts/services/ajax/storage/session-storage-factory.js"></script>
+        <script src="scripts/services/ajax/brewer-data-factory.js"></script>
+
+        <script src="scripts/services/resolves/brewer-resolve-factory.js"></script>
+
+        <script src="scripts/views/brewers/brewer-list-controller.js"></script>
 <!--
         // <script src="scripts/services/utilities/rounding-numbers.js"></script>
         // <script src="scripts/services/utilities/skycon-convert.js"></script>

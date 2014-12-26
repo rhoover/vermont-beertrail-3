@@ -1,7 +1,7 @@
 
 <input class="search-input" placeholder="Search: Everything" ng-model="search.$">
 
-<div class="brewer-list-scroller" data-scroll-to-top></div>
+<span class="brewer-list-scroller" data-scroll-to-top></span>
 
 <!-- <a ng-href="#!/{{brewer.selector}}" ng-repeat="brewer in brewerList | filter:search:strict track by $index" class="brewer-list-item"> -->
 <a ng-href="#!/{{brewer.selector}}" ng-repeat="brewer in lbC.brewerList | filter:search:strict track by brewer.latitude" class="brewer-list-item">
