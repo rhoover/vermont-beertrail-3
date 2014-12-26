@@ -9,6 +9,9 @@
             var brewers = function (resolveBrewers) {
                 return resolveBrewers.brewers();
             };
+            var dining = function (resolveDining) {
+                return resolveDining.dining();
+            };
 
             $routeProvider
                 .when('/', {
@@ -58,9 +61,9 @@
                     templateUrl: 'views/dining-list.html',
                     controller: 'ListDiningCtrl',
                     controllerAs: 'ldC',
-                    // resolve: {
-                    //     dining: dining
-                    // }
+                    resolve: {
+                        dining: dining
+                    }
                 })
                 .when('/:selector/dininglist/:id', {
                     templateUrl: 'views/dining-map.html',

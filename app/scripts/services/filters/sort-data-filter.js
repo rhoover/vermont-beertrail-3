@@ -25,7 +25,7 @@
 
             function businessSort(businessInput) {
                 var sortedBusinesses = [];
-                sortedBusinesses = input.sort(function (a, b) {
+                sortedBusinesses = businessInput.sort(function (a, b) {
                     return (a.name < b.name) ? -1 : 1;
                 });
                 return sortedBusinesses;
