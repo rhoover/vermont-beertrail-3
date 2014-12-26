@@ -5,8 +5,6 @@
         .module('vtbt3')
         .directive('homeMobile', homeMobile);
 
-    homeMobile.$inject = ['$location', '$timeout'];
-
     function homeMobile ($location, $timeout) {
 
         var directiveOptions = {
@@ -15,6 +13,8 @@
             scope: {}
         };
         return directiveOptions;
+
+        ////////////////
 
         function link(scope, element, attrs) {
             var bodyResult = getComputedStyle(element[0], ':after').content;
