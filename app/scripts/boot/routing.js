@@ -34,17 +34,17 @@
                     templateUrl: 'views/brewer-detail.html',
                     controller: 'BrewerDetailCtrl',
                     controllerAs: 'bdC',
-                    // resolve: {
-                    //     brewers: brewers
-                    // }
+                    resolve: {
+                        brewers: brewers
+                    }
                 })
                 .when('/:selector/location', {
                     templateUrl: 'views/brewer-detail-map.html',
                     controller: 'BrewerMapCtrl',
                     controllerAs: 'bmC',
-                    // resolve: {
-                    //     brewers: brewers
-                    // }
+                    resolve: {
+                        brewers: brewers
+                    }
                 })
                 .when('/:selector/weather', {
                     templateUrl: 'views/weather.html',
@@ -66,9 +66,9 @@
                     templateUrl: 'views/dining-map.html',
                     controller: 'DiningMapCtrl',
                     controllerAs: 'dmC',
-                    // resolve: {
-                    //     brewers: brewers
-                    // }
+                    resolve: {
+                        brewers: brewers
+                    }
                 })
                 .when('/:selector/shoppinglist', {
                     templateUrl: 'views/shopping-list.html',
@@ -82,9 +82,9 @@
                     templateUrl: 'views/shopping-map.html',
                     controller: 'ShoppingMapCtrl',
                     controllerAs: 'smC',
-                    // resolve: {
-                    //     brewers: brewers
-                    // }
+                    resolve: {
+                        brewers: brewers
+                    }
                 })
                 .otherwise({
                     redirectTo: '/'

@@ -9,11 +9,11 @@
 
         var lbC = this;
 
-        activate();
+        goForthAndBind();
 
         ////////////////
 
-        function activate() {
+        function goForthAndBind() {
 
             lbC.brewerList = storageFactory.getData(brewerCacheKey);
         }
