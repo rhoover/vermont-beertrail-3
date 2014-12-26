@@ -1,5 +1,6 @@
 (function () {
     'use strict';
+
     angular
         .module('vtbt3')
         .directive('buttonBack', buttonBack);
