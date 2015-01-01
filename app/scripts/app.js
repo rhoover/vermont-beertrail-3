@@ -6,7 +6,6 @@
             'vtbt3.angular',
             'vtbt3.routing',
             'vtbt3.urlHashing',
-            'vtbt3.debugMarkUp',
-            'vtbt3.interceptor'
+            'vtbt3.debugMarkUp'
         ]);
 })();

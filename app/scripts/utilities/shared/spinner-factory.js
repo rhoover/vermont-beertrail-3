@@ -7,7 +7,7 @@
 
     function spinnerFactory() {
 
-        var cache = {};
+        var ajaxCalls = {};
 
         var serviceInterface = {
             register: register,
@@ -21,22 +21,22 @@
 
         function register(obj) {
             console.log('register ' +obj);
-            cache['start'] = obj;
+            ajaxCalls['start'] = obj;
         }
 
         function unRegister(obj) {
             console.log('register ' +obj);
-            cache['finished'] = obj;
+            ajaxCalls['finished'] = obj;
         }
 
         function spinning() {
-            console.log(cache.start);
-            return cache.start;
+            console.log(ajaxCalls.start);
+            return ajaxCalls.start;
         }
 
         function notSpinning() {
-            console.log(cache.finished);
-            return cache.finished;
+            console.log(ajaxCalls.finished);
+            return ajaxCalls.finished;
         }
 
     }

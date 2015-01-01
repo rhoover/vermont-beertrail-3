@@ -5,34 +5,22 @@
         .module('vtbt3')
         .directive('loadingSpinner', loadingSpinner);
 
-    function loadingSpinner () {
+    function loadingSpinner(spinnerFactory) {
 
         var directiveOptions = {
-            controller: controller,
             link: link,
             restrict: 'A'
-            // scope: '@loading-spinner'
         };
         return directiveOptions;
 
         ////////////////
 
-        function controller($scope, $attrs, spinnerFactory){
-            // spinnerFactory.notSpinning($scope.spk.show);
-            // $scope.spinner = function () {
-                // $scope.spk.show = spinnerFactory.spinning();
-            // };
-        }
-
         function link(scope, element, attrs) {
             scope.spk.show = 'hide';
-            console.log(scope.spk.show);
-            // scope.spinner = function () {
-                // scope.spk.show = 'show';
-                // $timeout(function () {
-                //     scope.spk.show = spinnerFactory.spinning();
-                // }, 250);
-            // };
+            scope.showSpinner = function () {
+                scope.spk.show = 'show';
+                element.children().addClass('spinner-progress');
+            };
         }
     }
 })();

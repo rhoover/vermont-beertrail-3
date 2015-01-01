@@ -1,17 +1,7 @@
 .spinner {
 
     &-block {
-    display: none;
-        &-progress {
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            min-height: 100vh;
-            @include translateZ(15);
-            background: rgba($grey-blue-lite, .40);
-        }
+        display: none;
     }
 
     &-progress {
@@ -24,6 +14,17 @@
         border-top: .2em solid $green-darker;
         border-radius: 100%;
     }
+}
+
+[data-loading-spinner="show"] {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    @include translateZ(15);
+    background: rgba($grey-blue-liter, .75);
 }
 
 @include keyframes(rotation) {

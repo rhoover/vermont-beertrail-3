@@ -37,6 +37,7 @@ $green-white: lighten-new($green, 40%);
 $grey: rgb(147,149,152);
 $grey-blue: rgb(82,126,144);
 $grey-blue-lite: lighten-new($grey-blue, 25%);
+$grey-blue-liter: lighten-new($grey-blue, 85%);
 $attribution: rgba($grey-blue, .1);
 
 $black: darken-new($grey, 35%);

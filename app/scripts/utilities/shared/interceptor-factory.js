@@ -9,7 +9,8 @@
 
         return {
             request: function (config) {
-                if (config.cache === false) {
+                // if (config.cache === false) {
+                if (config.method === 'JSONP') {
                     spinnerFactory.register('show');
                 }
                 return config;

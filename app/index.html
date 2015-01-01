@@ -75,6 +75,7 @@
         <span class="header-home-button" data-button-home></span>
     </header>
 
+    <loading></loading>
     <main class="view" ng-view></main>
 
     <!-- build:js(.) scripts/thirdparty.js -->
@@ -82,10 +83,10 @@
     <!-- endbuild -->
 
     <!-- build:js(.) scripts/angular-min.js -->
-        <script src="libs/angular/angular.min.js"></script>
-        <script src="libs/angular-animate/angular-animate.min.js"></script>
-        <script src="libs/angular-touch/angular-touch.min.js"></script>
-        <script src="libs/angular-route/angular-route.min.js"></script>
+        <script src="libs/angular/angular.js"></script>
+        <script src="libs/angular-animate/angular-animate.js"></script>
+        <script src="libs/angular-touch/angular-touch.js"></script>
+        <script src="libs/angular-route/angular-route.js"></script>
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/vermont-beertrail.js -->
@@ -95,7 +96,7 @@
          <script src="scripts/boot/routing.js"></script>
          <script src="scripts/boot/url-hash.js"></script>
          <script src="scripts/boot/debug-markup.js"></script>
-         <script src="scripts/boot/interceptor.js"></script>
+         <!-- // <script src="scripts/boot/interceptor.js"></script> -->
 
         <script src="scripts/utilities/ajax/brewer-data-factory.js"></script>
         <script src="scripts/utilities/ajax/dining-data-factory.js"></script>
@@ -115,7 +116,7 @@
          <script src="scripts/utilities/shared/scroll-to-list-top-directive.js"></script>
          <script src="scripts/utilities/shared/spinner-factory.js"></script>
          <script src="scripts/utilities/shared/spinner-directive.js"></script>
-         <script src="scripts/utilities/shared/interceptor-factory.js"></script>
+         <!-- // <script src="scripts/utilities/shared/interceptor-factory.js"></script> -->
 
         <script src="scripts/utilities/storage/session-storage-factory.js"></script>
 
