@@ -8,7 +8,7 @@
 
 <div class="brewer-list-scroller" data-scroll-to-top></div>
 
-<a ng-href="#!/{{ldC.brewer.selector}}/dininglist/{{dining.id}}" class="yelp-list-item" ng-repeat="dining in ldC.diningList | filter:search:strict  track by $index">
+<a ng-href="#!/{{spk.brewer.selector}}/dininglist/{{dining.id}}" class="yelp-list-item" ng-repeat="dining in spk.diningList | filter:search:strict  track by $index">
     <img ng-src="{{dining.photo_url_small}}" class="yelp-list-item-image" />
     <p class="yelp-list-item-details">{{dining.name}}</p>
     <p class="yelp-list-item-details-small">{{dining.address1}}</p>
@@ -29,6 +29,6 @@
     <p class="brewer-list-item-detail brewer-list-item-detail-small">Stowe, VT</p>
 </a>
 
-<section class="spinner-block" data-loading-spinner-widget>
+<section class="spinner-block" data-loading-spinner="{{spk.show}}">
     <div class="spinner"></div>
 </section>

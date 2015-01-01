@@ -1,5 +1,6 @@
 (function () {
     'use strict';
+
     angular
         .module('vtbt3.routing', [])
         .config(routing);
@@ -15,76 +16,76 @@
 
             $routeProvider
                 .when('/', {
-                    templateUrl: 'views/home.html'
+                    templateUrl: 'partials/home.html'
                 })
                 .when('/brewerlist', {
-                    templateUrl: 'views/brewer-list.html',
+                    templateUrl: 'partials/brewers/brewer-list.html',
                     controller: 'ListBrewerCtrl',
-                    controllerAs: 'lbC',
+                    controllerAs: 'spk',
                     resolve: {
                         brewers: brewers
                     }
                 })
                 .when('/brewermap', {
-                    templateUrl: 'views/brewer-statewide-map.html',
+                    templateUrl: 'partials/brewers/brewer-statewide-map.html',
                     controller: 'BrewerStatewideMapCtrl',
-                    controllerAs: 'bsmC',
-                    // resolve: {
-                    //     brewers: brewers
-                    // }
+                    controllerAs: 'spk',
+                    resolve: {
+                        brewers: brewers
+                    }
                 })
                 .when('/:selector', {
-                    templateUrl: 'views/brewer-detail.html',
+                    templateUrl: 'partials/brewers/brewer-detail.html',
                     controller: 'BrewerDetailCtrl',
-                    controllerAs: 'bdC',
+                    controllerAs: 'spk',
                     resolve: {
                         brewers: brewers
                     }
                 })
                 .when('/:selector/location', {
-                    templateUrl: 'views/brewer-detail-map.html',
+                    templateUrl: 'partials/brewers/brewer-detail-map.html',
                     controller: 'BrewerMapCtrl',
-                    controllerAs: 'bmC',
+                    controllerAs: 'spk',
                     resolve: {
                         brewers: brewers
                     }
                 })
                 .when('/:selector/weather', {
-                    templateUrl: 'views/weather.html',
+                    templateUrl: 'partials/weather/weather.html',
                     controller: 'WeatherCtrl',
-                    controllerAs: 'wC',
+                    controllerAs: 'spk',
                     // resolve: {
                     //     weather: weather
                     // }
                 })
                 .when('/:selector/dininglist', {
-                    templateUrl: 'views/dining-list.html',
+                    templateUrl: 'partials/dining/dining-list.html',
                     controller: 'ListDiningCtrl',
-                    controllerAs: 'ldC',
+                    controllerAs: 'spk',
                     resolve: {
                         dining: dining
                     }
                 })
                 .when('/:selector/dininglist/:id', {
-                    templateUrl: 'views/dining-map.html',
+                    templateUrl: 'partials/dining/dining-map.html',
                     controller: 'DiningMapCtrl',
-                    controllerAs: 'dmC',
+                    controllerAs: 'spk',
                     resolve: {
                         brewers: brewers
                     }
                 })
                 .when('/:selector/shoppinglist', {
-                    templateUrl: 'views/shopping-list.html',
+                    templateUrl: 'partials/shopping/shopping-list.html',
                     controller: 'ListShoppingCtrl',
-                    controllerAs: 'lsC',
+                    controllerAs: 'spk',
                     // resolve: {
                     //     shopping: shopping
                     // }
                 })
                 .when('/:selector/shoppinglist/:id', {
-                    templateUrl: 'views/shopping-map.html',
+                    templateUrl: 'partials/shopping/shopping-map.html',
                     controller: 'ShoppingMapCtrl',
-                    controllerAs: 'smC',
+                    controllerAs: 'spk',
                     resolve: {
                         brewers: brewers
                     }

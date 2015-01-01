@@ -242,7 +242,7 @@ module.exports = function (grunt) {
                     method: 'after'
                 },
                 files: {
-                    'dist/index.html': ['app/views/*.html']
+                    'dist/index.html': ['app/partials/{,*/}*.html']
                 }
             }
         } //end inline-angular-templates

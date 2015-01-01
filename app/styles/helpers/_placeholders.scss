@@ -199,21 +199,16 @@
     z-index: 15;
     right: span(.5 of 12);
     bottom: rhythm(3, 16px);
-    width: span(2 of 12 no-gutters);
-    height: rhythm(2.3, 16px);
+    width: 50px;
+    height: 50px;
     background: rgba($grey-blue, .10);
     border-radius: 100%;
-    border: .1em solid rgba($grey-blue, .3);
+    border: .1em solid rgba($grey-blue, .75);
     cursor: pointer;
-    @include susy-breakpoint($bp-medium, $columns-medium) {
-        width: span(1.4 of 18);
-    }
     @include susy-breakpoint($bp-large, $columns-large) {
         right: span(2 of 24);
-        width: span(1 of 24);
     }
     &:hover {
-        border: .1em solid rgba($grey-blue, .75);
         background: rgba($grey-blue, .30);
         &:before {
             border-top: .3em solid rgba($grey-blue, .75);
@@ -225,18 +220,11 @@
         position: absolute;
         width: 25px;
         height: 25px;
-        top: 20px;
-        left: 14px;
+        top: 17px;
+        left: 12px;
         @include rotate(45deg);
         background: transparent;
-        border-top: .3em solid rgba($grey-blue, .3);
-        border-left: .3em solid rgba($grey-blue, .3);
-        @include susy-breakpoint($bp-medium, $columns-medium) {
-            left: 14px;
-        }
-        @include susy-breakpoint($bp-large, $columns-large) {
-            top: 19px;
-            left: 15px;
-        }
+        border-top: .3em solid rgba($grey-blue, .75);
+        border-left: .3em solid rgba($grey-blue, .75);
     }
 }

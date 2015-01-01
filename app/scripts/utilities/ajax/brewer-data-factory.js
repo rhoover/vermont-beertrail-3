@@ -5,7 +5,7 @@
         .module('vtbt3')
         .factory('brewerFactory', brewerFactory);
 
-    function brewerFactory($http) {
+    function brewerFactory($http, spinnerFactory) {
 
         var serviceInterface = {
             fetchBrewerData: fetchBrewerData

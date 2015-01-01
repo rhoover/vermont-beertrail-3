@@ -7,7 +7,8 @@
 
     function ListBrewerCtrl(storageFactory, brewerCacheKey) {
 
-        var lbC = this;
+        var spk = this;
+        spk.brewerList = [];
 
         goForthAndBind();
 
@@ -15,7 +16,8 @@
 
         function goForthAndBind() {
 
-            lbC.brewerList = storageFactory.getData(brewerCacheKey);
+            spk.brewerList = storageFactory.getData(brewerCacheKey);
+            spk.show = false;
         }
     }
 })();

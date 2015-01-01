@@ -5,9 +5,9 @@
         .module('vtbt3')
         .controller('BrewerDetailCtrl', BrewerDetailCtrl);
 
-    function BrewerDetailCtrl($scope, $routeParams, storageFactory, findDataFilter, brewerCacheKey) {
+    function BrewerDetailCtrl($scope, $routeParams, $timeout, storageFactory, findDataFilter, spinnerFactory, brewerCacheKey) {
 
-        var bdC = this;
+        var spk = this;
 
         goForthAndBind();
 
@@ -15,8 +15,17 @@
 
         function goForthAndBind() {
 
-            bdC.brewer = findDataFilter.brewerFind(storageFactory.getData(brewerCacheKey), $routeParams.selector);
-            $scope.brewer = bdC.brewer; //because res-img directive needs scope information
+            spk.brewer = findDataFilter.brewerFind(storageFactory.getData(brewerCacheKey), $routeParams.selector);
+            $scope.brewer = spk.brewer; //because res-img directive needs scope information
+            // $scope.spinner = function () {
+            //     spk.show = 'show';
+            // };
+            $scope.spinner = function () {
+                $timeout(function () {
+                    spk.show = spinnerFactory.spinning();
+                    console.log('look here');
+                }, 250);
+            };
         }
     }
 })();

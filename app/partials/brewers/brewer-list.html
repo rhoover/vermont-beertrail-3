@@ -3,7 +3,7 @@
 
 <span class="brewer-list-scroller" data-scroll-to-top></span>
 
-<a ng-href="#!/{{brewer.selector}}" ng-repeat="brewer in lbC.brewerList | filter:search:strict track by brewer.latitude" class="brewer-list-item">
+<a ng-href="#!/{{brewer.selector}}" ng-repeat="brewer in spk.brewerList | filter:search:strict track by brewer.latitude" class="brewer-list-item">
     <div class=" brewer-list-item-image brewer40-{{brewer.selector}}"></div>
     <p class="brewer-list-item-detail">{{brewer.name}}</p>
     <p class="brewer-list-item-detail brewer-list-item-detail-small">{{brewer.address}}</p>
@@ -16,6 +16,6 @@
     <p class="brewer-list-item-detail brewer-list-item-detail-small">Stowe, VT</p>
 </a>
 
-<section class="spinner-block" data-loading-spinner-widget>
+<div class="spinner-block" data-loading-spinner="{{spk.show}}">
     <div class="spinner"></div>
-</section>
+</div>

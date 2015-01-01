@@ -17,7 +17,8 @@
         function dining() {
 
             if (storageFactory.getData(brewerCacheKey) === null) {
-                var diningDataReturn = brewerFactory.getBrewerData()
+
+                var diningFromZeroDataStart = brewerFactory.fetchBrewerData()
                     .then(function success(data) {
                         var singleBrewer = findDataFilter.brewerFind(sortDataFilter.brewerSort(data), $route.current.params.selector);
                         storageFactory.storeData(brewerCacheKey, sortDataFilter.brewerSort(data));
@@ -26,14 +27,17 @@
                     .then(function success(data) {
                         storageFactory.storeData($route.current.params.selector + '-' + diningCacheKey, data);
                     });
-                return diningDataReturn;
+                return diningFromZeroDataStart;
+
             } else {
+
                 var singleBrewer = findDataFilter.brewerFind(storageFactory.getData(brewerCacheKey), $route.current.params.selector);
-                var diningDataOneReturn = diningFactory.yelpDiningInfo(singleBrewer.latitude, singleBrewer.longitude)
+                var diningFromBrewerDataStart = diningFactory.yelpDiningInfo(singleBrewer.latitude, singleBrewer.longitude)
                     .then(function success(data) {
                         storageFactory.storeData($route.current.params.selector + '-' + diningCacheKey, data);
                     });
-                return diningDataOneReturn;
+                return diningFromBrewerDataStart;
+
             }
         }
     }
