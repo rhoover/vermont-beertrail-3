@@ -17,7 +17,7 @@
         border-bottom: .1em solid $grey-blue-lite;
         background: rgba($grey-blue-lite, .45);
         @include susy-breakpoint($bp-medium, $columns-medium) {
-            $bleed: span(6)+gutter(4);
+            $bleed: span(6)+gutter(2.5);
             @include bleed-x($bleed);
             @include type-scale(large);
             color: $black;
