@@ -5,7 +5,7 @@
         .module('vtbt3')
         .controller('ListDiningCtrl', ListDiningCtrl);
 
-    function ListDiningCtrl($routeParams, storageFactory, sortDataFilter, findDataFilter, diningCacheKey, brewerCacheKey, spinnerFactory) {
+    function ListDiningCtrl($routeParams, storageFactory, sortDataFilter, findDataFilter, diningCacheKey, brewerCacheKey) {
 
         var spk = this;
 

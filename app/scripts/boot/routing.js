@@ -13,10 +13,13 @@
             var dining = function (resolveDining) {
                 return resolveDining.dining();
             };
+            var shopping = function (resolveShopping) {
+                return resolveShopping.shopping();
+            };
 
             $routeProvider
                 .when('/', {
-                    templateUrl: 'partials/home.html'
+                    templateUrl: 'partials/home/home.html'
                 })
                 .when('/brewerlist', {
                     templateUrl: 'partials/brewers/brewer-list.html',
@@ -78,9 +81,9 @@
                     templateUrl: 'partials/shopping/shopping-list.html',
                     controller: 'ListShoppingCtrl',
                     controllerAs: 'spk',
-                    // resolve: {
-                    //     shopping: shopping
-                    // }
+                    resolve: {
+                        shopping: shopping
+                    }
                 })
                 .when('/:selector/shoppinglist/:id', {
                     templateUrl: 'partials/shopping/shopping-map.html',

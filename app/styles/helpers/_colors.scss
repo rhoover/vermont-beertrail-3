@@ -44,3 +44,37 @@ $black: darken-new($grey, 35%);
 $black-dark: darken-new($grey, 65%);
 
 $white: lighten-new($yellow, 90%);
+
+
+// Scheme of colors -- Sass Maps Example
+// $colorscheme: (
+//   gray: (
+//     base: #ccc,
+//     light: #f2f2f2,
+//     dark: #666
+//   ),
+//   brown: (
+//     base: #ab906b,
+//     light: #ecdac3,
+//     dark: #5e421c
+//   )
+// );
+// Our function for shorter usage of map-get();
+// @function setcolor($scheme, $tone: base) {
+//     @return map-get(map-get($colorscheme, $scheme), $tone);
+// }
+// Sass
+// .element {
+//   color: setcolor(brown);
+// }
+// .element--light {
+//   color: setcolor(brown, light);
+// }
+
+// // Output
+// .element {
+//     color: #ab906b;
+// }
+// .element--light {
+//     color: #ecdac3;
+// }

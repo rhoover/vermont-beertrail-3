@@ -3,9 +3,9 @@
 
     angular
         .module('vtbt3')
-        .directive('homeDataPrefetch', homeDataPrefetch);
+        .directive('homeBrewerPrefetch', homeBrewerPrefetch);
 
-    function homeDataPrefetch ($timeout, resolveBrewers) {
+    function homeBrewerPrefetch ($timeout, resolveBrewers) {
 
         var directiveOptions = {
             link: link,

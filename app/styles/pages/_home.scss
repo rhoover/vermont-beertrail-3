@@ -15,6 +15,7 @@
         color: $white;
         border-top: .1em solid $grey-blue-lite;
         border-bottom: .1em solid $grey-blue-lite;
+        background: rgba($grey-blue-lite, .45);
         @include susy-breakpoint($bp-medium, $columns-medium) {
             $bleed: span(6)+gutter(4);
             @include bleed-x($bleed);
@@ -22,6 +23,7 @@
             color: $black;
             border-top: .1em solid $grey-blue-lite;
             border-bottom: .1em solid $grey-blue-lite;
+            background: rgba($grey-blue-lite, .10);
         }
     }
     &-choose {
