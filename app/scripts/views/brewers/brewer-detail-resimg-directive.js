@@ -11,7 +11,7 @@
             template: '<img class="brewerdetail-image"/>',
             link: link,
             restrict: 'E',
-            replace: true,
+            replace: true
         };
         return directiveOptions;
 

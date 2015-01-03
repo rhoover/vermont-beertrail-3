@@ -16,7 +16,7 @@
         function goForthAndBind() {
 
             spk.brewer = findDataFilter.brewerFind(storageFactory.getData(brewerCacheKey), $routeParams.selector);
-            $scope.brewer = spk.brewer; //because res-img directive needs scope information
+            $scope.brewer = spk.brewer; //because res-img directive needs scope object information
         }
     }
 })();

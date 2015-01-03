@@ -16,6 +16,9 @@
             var shopping = function (resolveShopping) {
                 return resolveShopping.shopping();
             };
+            var weather = function (resolveWeather) {
+                return resolveWeather.weather();
+            };
 
             $routeProvider
                 .when('/', {
@@ -57,9 +60,9 @@
                     templateUrl: 'partials/weather/weather.html',
                     controller: 'WeatherCtrl',
                     controllerAs: 'spk',
-                    // resolve: {
-                    //     weather: weather
-                    // }
+                    resolve: {
+                        weather: weather
+                    }
                 })
                 .when('/:selector/dininglist', {
                     templateUrl: 'partials/dining/dining-list.html',

@@ -15,7 +15,7 @@
         margin-top: rhythm(1, 16px);
         padding: rhythm(.25, 16px) 0;
         @include type-scale(medium);
-        text-align: center;
+        text-align: left;
         color: $black;
         border-bottom: .05em solid $grey-blue;
         @include susy-breakpoint($bp-large, $columns-large) {

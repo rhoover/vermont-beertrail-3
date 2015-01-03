@@ -3,18 +3,15 @@
     <a href="http://www.forecast.io" target="_blank">Local Weather Courtesy of Forecast.io</a>
 </section>
 
-<h3 class="weather-header">Currently in {{::wC.brewer.city}}:</h3>
-<weather-skycons data-skycon="{{::wC.weather.currently.icon}}" class="weather-skycons"></weather-skycons>
-<p class="weather-description">{{::wC.weather.currently.summary}} and {{::wC.temp}}&#176;, with a chance of precipitation of {{::wC.weather.currently.precipProbability}}%</p>
+<h3 class="weather-header">Currently in {{::spk.brewer.city}}:</h3>
+<weather-skycons data-skycon="{{::spk.weather.currently.icon}}" class="weather-skycons"></weather-skycons>
+<p class="weather-description">{{::spk.weather.currently.summary}} and {{::spk.temp}}&#176;, with a chance of precipitation of {{::spk.weather.currently.precipProbability}}%</p>
 
 <h4 class="weather-forecast">The Rest of Today:</h4>
-<weather-skycons data-skycon="{{::wC.weather.hourly.icon}}" class="weather-skycons"></weather-skycons>
-<p class="weather-description">{{::wC.weather.hourly.summary}}</p>
+<weather-skycons data-skycon="{{::spk.weather.hourly.icon}}" class="weather-skycons"></weather-skycons>
+<p class="weather-description">{{::spk.weather.hourly.summary}}</p>
 
 <h4 class="weather-forecast">Tomorrow:</h4>
-<weather-skycons data-skycon="{{::wC.weather.daily.data[2].icon}}" class="weather-skycons"></weather-skycons>
-<p class="weather-description">{{::wC.weather.daily.data[2].summary}} High temperatures around {{::wC.maxTemp}}&#176;</p>
+<weather-skycons data-skycon="{{::spk.weather.daily.data[2].icon}}" class="weather-skycons"></weather-skycons>
+<p class="weather-description">{{::spk.weather.daily.data[2].summary}} High temperatures around {{::spk.maxTemp}}&#176;</p>
 
-<section class="spinner-block" data-loading-spinner-widget>
-    <div class="spinner"></div>
-</section>

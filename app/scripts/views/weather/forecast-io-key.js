@@ -3,5 +3,5 @@
 
     angular
         .module('vtbt3')
-        .constant('brewerCacheKey', 'brewer-list-cache');
+        .constant('weatherKey', 'f8f2554ef4616c5fe690247824dfa8ad');
 })();
