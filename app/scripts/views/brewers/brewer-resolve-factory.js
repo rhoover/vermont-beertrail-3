@@ -5,7 +5,7 @@
         .module('vtbt3')
         .factory('resolveBrewers', resolveBrewers);
 
-    function resolveBrewers(brewerFactory, storageFactory, sortDataFilter, brewerCacheKey, spinnerFactory) {
+    function resolveBrewers(brewerFactory, storageFactory, sortDataFilter, brewerCacheKey) {
 
         var serviceInterface = {
             brewers: brewers

@@ -5,7 +5,7 @@
         .module('vtbt3')
         .directive('loadingSpinner', loadingSpinner);
 
-    function loadingSpinner(spinnerFactory) {
+    function loadingSpinner() { //spinnerFactory
 
         var directiveOptions = {
             link: link,
