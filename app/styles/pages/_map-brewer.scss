@@ -2,7 +2,7 @@
     display: block;
     margin-top: rhythm(-.01, 16px);
     @extend %inside-view;
-    height: rhythm(24, 16px);
+    min-height: rhythm(22, 16px);
     overflow: visible !important;
     z-index: 25;
     @include susy-breakpoint($bp-medium, $columns-medium) {
