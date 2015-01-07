@@ -6,12 +6,26 @@ html {
 .body {
     @extend %responsive-trigger;
     min-height: 100vh;
+    position: relative;
     font-family: $MerriweatherSans;
     @extend %font-helpers;
     background-color: $white;
     &-small-home {
-        background: url('/images/phone-home-bg.jpg') no-repeat fixed left top;
-        background-size: cover;
+        &:before {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background: url('/images/phone-home-bg.jpg') no-repeat fixed left top;
+            background-size: cover;
+            @include animation-name(bg-fade-in);
+            @include animation-fill-mode(forwards);
+            @include animation-duration(.25s);
+            @include animation-timing-function(cubic-bezier(0.250, 0.460, 0.450, 0.940));
+        }
         @include susy-breakpoint($bp-medium, $columns-medium) {
             background: $white;
         }
@@ -21,3 +35,8 @@ html {
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+
+@include keyframes(bg-fade-in) {
+    0% {opacity: 0}
+    100% {opacity: 1}
+};
