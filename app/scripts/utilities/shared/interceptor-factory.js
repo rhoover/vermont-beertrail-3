@@ -11,18 +11,17 @@
 
         return {
             request: function (config) {
-                // if (config.cache === false) {
                 if (config.method === 'JSONP') {
-                    spinnerFactory.register('show');
+                    spinnerFactory.register('requesting');
                 }
                 return config;
-            },
-            response: function (result) {
-                if (typeof result.data === 'object') {
-                    spinnerFactory.unRegister('hide');
-                }
-                return result;
             }
+            // response: function (result) {
+            //     if (typeof result.data === 'object') {
+            //         spinnerFactory.cleaning('hide');
+            //     }
+            //     return result;
+            // }
         };
     }
 })();

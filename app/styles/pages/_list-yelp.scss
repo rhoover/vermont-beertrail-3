@@ -2,6 +2,7 @@
     &-attribution {
         @extend %attribution;
         min-height: rhythm(1, 16px);
+        margin-bottom: rhythm(1, 16px);
         @include susy-breakpoint($bp-medium, $columns-medium) {
             $bleed: span(6)+gutter(4);
             @include bleed-x($bleed);

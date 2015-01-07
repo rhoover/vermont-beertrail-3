@@ -4,15 +4,26 @@
         display: none;
     }
 
-    &-progress {
+    &-circle{
         clear: both;
         display: block;
         width: rhythm(5, 16px);
         height: rhythm(5, 16px);
-        margin: rhythm(8, 16px) auto;
+        margin: rhythm(12, 16px) auto;
         @include animation(rotation .95s infinite linear);
         border-top: .2em solid $green-darker;
         border-radius: 100%;
+    }
+
+    &-show {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100vh;
+        @include translateZ(15);
+        background: rgba($grey-blue-liter, .75);
     }
 }
 

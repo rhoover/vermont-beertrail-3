@@ -5,7 +5,7 @@
         .module('vtbt3')
         .controller('BrewerDetailCtrl', BrewerDetailCtrl);
 
-    function BrewerDetailCtrl($scope, $routeParams, $timeout, storageFactory, findDataFilter, brewerCacheKey) {
+    function BrewerDetailCtrl($scope, $routeParams, storageFactory, findDataFilter, brewerCacheKey) {
 
         var spk = this;
 

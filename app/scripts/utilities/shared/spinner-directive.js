@@ -5,7 +5,7 @@
         .module('vtbt3')
         .directive('loadingSpinner', loadingSpinner);
 
-    function loadingSpinner() { //spinnerFactory
+    function loadingSpinner($rootScope) {
 
         var directiveOptions = {
             link: link,
@@ -17,11 +17,14 @@
         ////////////////
 
         function link(scope, element, attrs) {
-            scope.spk.show = 'hide';
-            scope.showSpinner = function () {
-                scope.spk.show = 'show';
-                element.children().addClass('spinner-progress');
+
+            var updateFromRoot = function () {
+                element.addClass('spinner-show');
             };
+
+
+            $rootScope.$on('requesting', updateFromRoot);
+            scope.$on('destroy', $rootScope.$on('requesting'));
         }
     }
 })();
