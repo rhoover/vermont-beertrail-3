@@ -22,12 +22,14 @@
 
             $routeProvider
                 .when('/', {
-                    templateUrl: 'partials/home/home.html'
+                    templateUrl: 'partials/home/home.html',
+                    title: 'Home'
                 })
                 .when('/brewerlist', {
                     templateUrl: 'partials/brewers/brewer-list.html',
                     controller: 'ListBrewerCtrl',
                     controllerAs: 'spk',
+                    title: 'Brewer List',
                     resolve: {
                         brewers: brewers
                     }
@@ -36,6 +38,7 @@
                     templateUrl: 'partials/brewers/brewer-statewide-map.html',
                     controller: 'BrewerStatewideMapCtrl',
                     controllerAs: 'spk',
+                    title: 'brewers-map',
                     resolve: {
                         brewers: brewers
                     }
@@ -44,6 +47,7 @@
                     templateUrl: 'partials/brewers/brewer-detail.html',
                     controller: 'BrewerDetailCtrl',
                     controllerAs: 'spk',
+                    title: 'brewer',
                     resolve: {
                         brewers: brewers
                     }
@@ -52,6 +56,7 @@
                     templateUrl: 'partials/brewers/brewer-detail-map.html',
                     controller: 'BrewerMapCtrl',
                     controllerAs: 'spk',
+                    title: 'brewer-map',
                     resolve: {
                         brewers: brewers
                     }
@@ -60,6 +65,7 @@
                     templateUrl: 'partials/weather/weather.html',
                     controller: 'WeatherCtrl',
                     controllerAs: 'spk',
+                    title: 'weather',
                     resolve: {
                         weather: weather
                     }
@@ -68,6 +74,7 @@
                     templateUrl: 'partials/dining/dining-list.html',
                     controller: 'ListDiningCtrl',
                     controllerAs: 'spk',
+                    title: 'dining-list',
                     resolve: {
                         dining: dining
                     }
@@ -76,6 +83,7 @@
                     templateUrl: 'partials/dining/dining-map.html',
                     controller: 'DiningMapCtrl',
                     controllerAs: 'spk',
+                    title: 'dining-map',
                     resolve: {
                         brewers: brewers
                     }
@@ -84,6 +92,7 @@
                     templateUrl: 'partials/shopping/shopping-list.html',
                     controller: 'ListShoppingCtrl',
                     controllerAs: 'spk',
+                    title: 'shopping-list',
                     resolve: {
                         shopping: shopping
                     }
@@ -92,6 +101,7 @@
                     templateUrl: 'partials/shopping/shopping-map.html',
                     controller: 'ShoppingMapCtrl',
                     controllerAs: 'spk',
+                    title: 'shopping-map',
                     resolve: {
                         brewers: brewers
                     }

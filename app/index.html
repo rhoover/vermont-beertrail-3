@@ -1,9 +1,9 @@
 <!doctype html>
 <html ng-app="vtbt3">
-    <head>
+    <head ng-controller="TitleCtrl">
         <!-- Generic -->
         <meta charset="utf-8"/>
-        <title>VT BeerTrail</title>
+        <title>VT BeerTrail | {{title}}</title>
         <meta content="index, follow" name="robots"></meta>
         <meta name="description" content="A Comprehensive Mobile Reference Of Vermont's Brewers and Their Communities">
         <meta name="author" content="Robin Hoover - MooseDog Studios - Stowe, VT - robin.hoover@gmail.com">
@@ -108,6 +108,7 @@
          <script src="scripts/utilities/shared/spinner-factory.js"></script>
          <script src="scripts/utilities/shared/spinner-directive.js"></script>
          <script src="scripts/utilities/shared/interceptor-factory.js"></script>
+         <script src="scripts/utilities/shared/page-title-controller.js"></script>
 
         <script src="scripts/utilities/storage/session-storage-factory.js"></script>
 
