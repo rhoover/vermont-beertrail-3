@@ -5,7 +5,7 @@
         .module('vtbt3')
         .controller('WeatherCtrl', WeatherCtrl);
 
-    function WeatherCtrl($scope, $routeParams, storageFactory,  findDataFilter, roundingNumbers, brewerCacheKey, weatherCacheKey) {
+    function WeatherCtrl($routeParams, storageFactory,  findDataFilter, roundingNumbers, brewerCacheKey, weatherCacheKey) {
 
         var spk = this;
 

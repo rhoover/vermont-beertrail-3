@@ -17,7 +17,6 @@
         function goForthAndBind() {
 
             spk.brewerList = storageFactory.getData(brewerCacheKey);
-            spk.show = false;
         }
     }
 })();

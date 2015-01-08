@@ -7,8 +7,6 @@
 
     function TitleCtrl($scope, $routeParams, storageFactory, findDataFilter, brewerCacheKey) {
 
-        var spk = this;
-
         goForthAndBind();
 
         ////////////////

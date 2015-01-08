@@ -5,8 +5,8 @@
         .module('vtbt3')
         .controller('BrewerMapCtrl', BrewerMapCtrl);
 
-    function BrewerMapCtrl($scope, $routeParams, $window, storageFactory, findDataFilter, brewerCacheKey) {
-        /*jshint validthis: true */
+    function BrewerMapCtrl($routeParams, $window, storageFactory, findDataFilter, brewerCacheKey) {
+
         var spk = this;
 
         goForthAndBind();
