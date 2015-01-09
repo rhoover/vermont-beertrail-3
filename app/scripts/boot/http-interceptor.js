@@ -1,10 +1,8 @@
-//Not bieng used but kepy her for historical and reference purposes
-
 (function () {
     'use strict';
 
     angular
-        .module('vtbt3.interceptor', [])
+        .module('vtbt3.httpInterceptor', [])
         .config(requesting);
 
         function requesting($httpProvider) {

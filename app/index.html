@@ -1,6 +1,7 @@
 <!doctype html>
 <html ng-app="vtbt3">
     <head ng-controller="TitleCtrl">
+
         <!-- Generic -->
         <meta charset="utf-8"/>
         <title>VT BeerTrail | {{title}}</title>
@@ -47,6 +48,7 @@
 
         <!-- For Apple Start-Up Image-->
         <link rel="apple-touch-startup-image" href="/startup-image.png">
+
         <!-- Twitter -->
         <meta property="twitter:title" content="Vermont Beer Trail" />
         <meta property="twitter:image" content="http://www.vtbeertrail.com/images/trail-sign.png" />
@@ -56,8 +58,8 @@
         <!-- Facebook -->
         <meta property="og:title" content="Vermont Beer Trail" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="http://www.vtbeertrail.com/images/trail-sign.png" />
         <meta property="og:url" content="http://www.vtbeertrail.com" />
+        <meta property="og:image" content="http://www.vtbeertrail.com/images/trail-sign.png" />
         <meta property="og:description" content="A Comprehensive Mobile Reference of Vermont's Brewers and Their Communities" />
         <meta property="og:site_name" content="Vermont Beer Trail" />
         <meta property="og:locale" content="en_US" />
@@ -95,7 +97,8 @@
          <script src="scripts/boot/routing.js"></script>
          <script src="scripts/boot/url-hash.js"></script>
          <script src="scripts/boot/debug-markup.js"></script>
-         <script src="scripts/boot/interceptor.js"></script>
+         <script src="scripts/boot/http-interceptor.js"></script>
+         <script src="scripts/boot/run.js"></script>
 
         <script src="scripts/utilities/filters/sort-data-filter.js"></script>
         <script src="scripts/utilities/filters/find-data-filter.js"></script>
@@ -151,7 +154,7 @@
         <script src="scripts/views/weather/weather-skycons-directive.js"></script>
     <!-- endbuild -->
 
-    <!-- Google Analytics New
+    <!-- Google Analytics New -->
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -169,6 +172,6 @@
         // ga('send', 'pageview');
 
     </script>
-    -->
+
     </body>
 </html>
