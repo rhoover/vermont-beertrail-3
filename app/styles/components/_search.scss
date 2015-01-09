@@ -1,6 +1,12 @@
 .search {
+    position: relative;
+    @include span(12 wide of 12 no-gutters);
+    overflow: hidden;
+    @include susy-breakpoint($bp-large, $columns-large) {
+        margin-bottom: rhythm(1, 16px);
+    }
     &-input {
-        @include span(12 wide of 12 no-gutters);
+        width: 100%;
         @include type-scale(medium);
         padding-left: span(.5);
         background: transparent;
@@ -8,21 +14,31 @@
         border-style: solid;
         border-color: $grey-blue-lite;
         border-width: 0 0 .1em 0;
+        @include transition-property(all);
+        @include transition-duration(.75s);
         &:focus {
             outline: none;
-            border-width: 0 0 .3em 0;
-            &::-webkit-input-placeholder {
-                color: transparent;
-            }
-            &::-moz-input-placeholder {
-                color: transparent;
-            }
-            &:-ms-input-placeholder {
-                color: transparent;
+            border-color: $grey-blue-lite;
+            border-width: 0 0 .1em .1em;
+            & ~ .search-label {
+                @include translate3d(-100%, -120%, 0);
+                @include transition-property(all);
+                @include transition-duration(.75s);
+                opacity: .5;
             }
         }
+    }
+    &-label {
+        position: absolute;
+        display: block;
+        @include translate3d(10%, -130%, 0);
+        @include transition-timing-function(cubic-bezier(0.250, 0.460, 0.450, 0.940) );
+        @include transition-property(all);
+        @include transition-duration(.75s);
+        @include type-scale(base);
+        color: $grey;
         @include susy-breakpoint($bp-large, $columns-large) {
-            margin-bottom: rhythm(1, 16px);
+            @include translate3d(20%, -130%, 0);
         }
     }
 }
