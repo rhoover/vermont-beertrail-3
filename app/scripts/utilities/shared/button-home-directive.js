@@ -5,8 +5,6 @@
         .module('vtbt3')
         .directive('buttonHome', buttonHome);
 
-    buttonHome.$inject = ['$location'];
-
     function buttonHome($location) {
 
         var directiveOptions = {

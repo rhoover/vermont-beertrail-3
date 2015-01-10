@@ -1,5 +1,3 @@
-//Not bieng used but kepy her for historical and reference purposes
-
 (function () {
     'use strict';
 

@@ -5,7 +5,7 @@
         .module('vtbt3')
         .directive('scrollToTop', scrollToTop);
 
-    function scrollToTop () {
+    function scrollToTop() {
 
         var directiveOptions = {
             link: link,
@@ -19,6 +19,7 @@
         function link(scope, element, attrs) {
 
              //t = current time, b = start value, c = change in value, d = duration
+             //should have copied where I found this :(, as clearly I am not a mathemetician
             Math.easeInOutQuad = function (t, b, c, d) {
                 t /= d/2;
                 if (t < 1) {

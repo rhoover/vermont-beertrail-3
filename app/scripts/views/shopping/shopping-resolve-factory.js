@@ -25,7 +25,7 @@
                         return shoppingFactory.yelpShoppingInfo(singleBrewer.latitude, singleBrewer.longitude);
                     })
                     .then(function success(data) {
-                        storageFactory.storeData($route.current.params.selector + '-' + diningCacheKey, data);
+                        storageFactory.storeData($route.current.params.selector + '-' + shoppingCacheKey, data);
                     });
                 return shoppingFromZeroDataStart;
 
