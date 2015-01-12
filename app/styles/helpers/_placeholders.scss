@@ -14,8 +14,14 @@
     text-decoration: none;
     color: $yellow-lite;
     text-shadow: 0 0 1px $black-dark;
+    @include transition-property(color);
+    @include transition-duration(0.45s);
+    @include transition-timing-function(cubic-bezier(0.250, 0.460, 0.450, 0.940) );
     &:active {
         text-shadow: 0 0 1px $black, 0 0 1em $white;
+    }
+    &:hover {
+        color: darken-new($yellow-lite, 25%);
     }
 }
 
@@ -55,8 +61,8 @@
             visibility: hidden;
             @include scaleX(0);
             @include transition-property(all);
-            @include transition-duration(0.3s);
-            @include transition-timing-function(ease-in-out);
+            @include transition-duration(0.45s);
+            @include transition-timing-function(cubic-bezier(0.250, 0.460, 0.450, 0.940) );
         }
         &:hover {
             @include type-weight(bold);
@@ -163,8 +169,8 @@
                 visibility: hidden;
                 @include scaleX(0);
                 @include transition-property(all);
-                @include transition-duration(0.3s);
-                @include transition-timing-function(ease-in-out);
+                @include transition-duration(0.45s);
+                @include transition-timing-function(cubic-bezier(0.250, 0.460, 0.450, 0.940) );
             }
             &:hover {
                 @include type-weight(bold);
@@ -205,6 +211,9 @@
     border-radius: 100%;
     border: .1em solid rgba($grey-blue, .75);
     cursor: pointer;
+    @include transition-property(background);
+    @include transition-duration(0.45s);
+    @include transition-timing-function(cubic-bezier(0.250, 0.460, 0.450, 0.940) );
     @include susy-breakpoint($bp-large, $columns-large) {
         right: span(2 of 24);
     }

@@ -23,6 +23,7 @@
             border-width: 0 0 .1em .1em;
             & ~ .search-label {
                 @include translate3d(-100%, -120%, 0);
+                @include transition-timing-function(cubic-bezier(0.250, 0.460, 0.450, 0.940) );
                 @include transition-property(all);
                 @include transition-duration(.75s);
             }
@@ -31,6 +32,7 @@
     &-label {
         position: absolute;
         display: block;
+        //this makes the losing focus text animate back into poistion
         @include translate3d(10%, -130%, 0);
         @include transition-timing-function(cubic-bezier(0.250, 0.460, 0.450, 0.940) );
         @include transition-property(all);
