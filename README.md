@@ -23,8 +23,6 @@ WHY?
 
 TODO
 ---------------------
-* Everything at this point, but down the line:
-* Dynamic title element
 * Full Server-Side SEO
 * Track client-side load times
 * Head up to Morrisville to buy a growler of Petit Ardennes from Lost Nation
