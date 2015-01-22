@@ -13,8 +13,8 @@
             scope: {
                 lat: '@lat',
                 lon: '@lon',
-                // lati: '@lati',
-                // loni: '@loni'
+                ilat: '@ilat',
+                ilon: '@ilon'
             }
         };
         return directiveOptions;
@@ -28,10 +28,10 @@
                 var myMapOptions, map, marker, circle, dynamicCircle;
                 var div = element[0];
 
-                myMapOptions = mapInit.mapOptions(10, attrs.lat, attrs.lon);
+                myMapOptions = mapInit.mapOptions(14, attrs.lat, attrs.lon);
                 map = mapInit.mapCreator(div, myMapOptions);
                 marker = mapInit.mapMarker(map, attrs.lat, attrs.lon);
-                circle = mapInit.gpsCircle(map, attrs.lati, attrs.loni);
+                circle = mapInit.gpsCircle(map, attrs.ilat, attrs.ilon);
                 dynamicCircle = mapInit.dynamicCircle(map, circle);
             };
 

@@ -52,7 +52,7 @@
             var gpsCircle = new google.maps.Circle({
                 map:map,
                 center: new google.maps.LatLng(lati, loni),
-                radius: 1000,
+                radius: 50,
                 fillColor: '#00BFFF',
                 fillOpacity: .45,
                 strokeColor: '#00008B',

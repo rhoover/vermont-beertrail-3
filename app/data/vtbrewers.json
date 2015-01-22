@@ -424,23 +424,6 @@
         "twitter":"https://twitter.com/trappfamily",
         "googleplus":""
     },
-    // {
-    //     "name": "Trout River Brewing Company",
-    //     "address": "645 Broad Street",
-    //     "city": "Lyndonville",
-    //     "state": "VT",
-    //     "zip": "05851",
-    //     "latitude": 44.528568,
-    //     "longitude": -72.001636,
-    //     "vba100": "images/brewer100/troutriver.png",
-    //     "vba200": "images/brewer200/troutriver.png",
-    //     "selector": "troutriver",
-    //     "url":"http://www.troutriverbrewing.com/",
-    //     "phone":"802.626.9396",
-    //     "facebook":"",
-    //     "twitter":"",
-    //     "googleplus":"https://plus.google.com/113269235779436595899/about?gl=us&hl=en"
-    // },
     {
         "name": "Whetstone Station",
         "address": "36 Bridge Street",
