@@ -8,7 +8,6 @@
     &-input {
         width: 100%;
         @include type-scale(medium);
-        padding-left: span(.5);
         background: transparent;
         border-top: transparent;
         border-style: solid;
@@ -33,7 +32,7 @@
         position: absolute;
         display: block;
         //this makes the losing focus text animate back into poistion
-        @include translate3d(10%, -130%, 0);
+        @include translate3d(5%, -130%, 0);
         @include transition-timing-function(cubic-bezier(0.250, 0.460, 0.450, 0.940) );
         @include transition-property(all);
         @include transition-duration(.75s);

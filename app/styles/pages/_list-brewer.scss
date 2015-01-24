@@ -8,10 +8,10 @@
         &-image {
             @extend %lists-image;
         }
-        &-detail {
-            @extend %lists-detail;
+        &-content {
+            @extend %lists-content;
             &-small {
-                @extend %lists-detail-small;
+                @extend %lists-content-small;
             }
         }
     }

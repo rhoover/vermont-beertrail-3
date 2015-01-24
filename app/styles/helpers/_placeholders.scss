@@ -79,7 +79,7 @@
         background-color: rgba($grey-blue, .25);
     }
 
-    &-detail {
+    &-content {
         @include span(last 9 of 12);
         @include type-scale(base);
         color: $black;

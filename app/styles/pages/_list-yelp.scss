@@ -35,10 +35,10 @@
                 @include span(4 of 24);
             }
         }
-        &-details {
-            @extend %lists-detail;
+        &-content {
+            @extend %lists-content;
             &-small {
-                @extend %lists-detail-small;
+                @extend %lists-content-small;
                 margin-top: 0;
                 @include type-scale(small);
             }
@@ -53,7 +53,7 @@
 
 //Courtesy of http://hugogiraudel.com/2014/02/24/star-rating-system-with-sass/
 .rating {
-    @extend %lists-detail;
+    @extend %lists-content;
     &-small {
         @include type-scale(tiny);
     }

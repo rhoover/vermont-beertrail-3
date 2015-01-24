@@ -8,15 +8,15 @@
 
 <a ng-href="#!/{{brewer.selector}}" ng-repeat="brewer in spk.brewerList | filter:search:strict track by brewer.latitude" class="brewer-list-item">
     <div class=" brewer-list-item-image brewer40-{{brewer.selector}}"></div>
-    <p class="brewer-list-item-detail">{{brewer.name}}</p>
-    <p class="brewer-list-item-detail brewer-list-item-detail-small">{{brewer.address}}</p>
-    <p class="brewer-list-item-detail brewer-list-item-detail-small">{{brewer.city}}, {{brewer.state}}</p>
+    <p class="brewer-list-item-content">{{brewer.name}}</p>
+    <p class="brewer-list-item-content brewer-list-item-content-small">{{brewer.address}}</p>
+    <p class="brewer-list-item-content brewer-list-item-content-small">{{brewer.city}}, {{brewer.state}}</p>
 </a>
 
 <a href="http://www.moosedog.io" target="_blank" class="brewer-list-item">
     <div class=" brewer-list-item-image brewer40-moosedog"></div>
-    <p class="brewer-list-item-detail brewer brewer-list-item-detail-small">VT Beer Trail Is Handcrafted By:</p>
-    <p class="brewer-list-item-detail">MooseDog Studios</p>
-    <p class="brewer-list-item-detail brewer-list-item-detail-small">Stowe, VT</p>
+    <p class="brewer-list-item-content brewer brewer-list-item-content-small">VT Beer Trail Is Handcrafted By:</p>
+    <p class="brewer-list-item-content">MooseDog Studios</p>
+    <p class="brewer-list-item-content brewer-list-item-content-small">Stowe, VT</p>
 </a>
 
