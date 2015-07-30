@@ -7,6 +7,11 @@
             @include susy-breakpoint($bp-medium, $columns-medium) {
                 color: $black;
             }
+            &-header {
+                @include type-scale(large);
+                text-align: center;
+                color: $black;
+            }
     }
     &-header {
         @extend %inside-view;

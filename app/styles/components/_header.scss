@@ -9,7 +9,7 @@
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(18 wide of 18 no-gutters);
     }
-    @include susy-breakpoint($bp-medium, $columns-medium) {
+    @include susy-breakpoint($bp-large, $columns-large) {
         @include span(24 wide of 24 no-gutters);
     }
 

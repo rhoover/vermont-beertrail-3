@@ -285,7 +285,7 @@
         "url":"http://www.madisonbrewingco.com/",
         "phone":"802.442.7397",
         "facebook":"",
-        "twitter":"",
+        "twitter":"https://twitter.com/MadisonBrewing",
         "googleplus":""
     },
     {
@@ -626,6 +626,57 @@
         "phone":"802.249.1125",
         "facebook":"https://www.facebook.com/BentHillBrewery",
         "twitter":"https://twitter.com/BentHillBrewery",
+        "googleplus":""
+    },
+    {
+        "name": "Simple Roots Brewing",
+        "address": "New North End",
+        "city": "Burlington",
+        "state": "VT",
+        "zip": "05408-2544",
+        "latitude": 44.4758825,
+        "longitude":  -73.212072,
+        "vba100": "images/brewer100/simpleroots.png",
+        "vba200": "images/brewer200/simpleroots.png",
+        "selector": "simpleroots",
+        "url":"http://www.simplerootsbrewing.com/",
+        "phone":"",
+        "facebook":"https://www.facebook.com/pages/Simple-Roots-Brewing/1405276053058250",
+        "twitter":"http://twitter.com/simplerootsbrew",
+        "googleplus":""
+    },
+    {
+        "name": "Hermit Thrush Brewery",
+        "address": "29 High Street, Suite 101C",
+        "city": "Brattleboro",
+        "state": "VT",
+        "zip": "05301",
+        "latitude": 42.8534875,
+        "longitude":  -72.5596126,
+        "vba100": "images/brewer100/hermitthrush.png",
+        "vba200": "images/brewer200/hermitthrush.png",
+        "selector": "hermitthrush",
+        "url":"http://www.hermitthrushbrewery.com/",
+        "phone":"802.257.BEER",
+        "facebook":"https://www.facebook.com/HermitThrushBrewery?ref=hl",
+        "twitter":"https://twitter.com/BrattleBeer",
+        "googleplus":""
+    },
+    {
+        "name": "Frost Beer Works",
+        "address": "171 Commerce Street",
+        "city": "Hinesburg",
+        "state": "VT",
+        "zip": "05461",
+        "latitude": 44.335381,
+        "longitude":  -73.108999,
+        "vba100": "images/brewer100/frostbeer.png",
+        "vba200": "images/brewer200/frostbeer.png",
+        "selector": "frostbeer",
+        "url":"http://www.frostbeerworks.com/",
+        "phone":"949.945.4064",
+        "facebook":"",
+        "twitter":"",
         "googleplus":""
     }
 ]
