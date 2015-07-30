@@ -10,7 +10,10 @@
             &-header {
                 @include type-scale(large);
                 text-align: center;
-                color: $black;
+                color: $white;
+                @include susy-breakpoint($bp-medium, $columns-medium) {
+                    color: $black;
+                }
             }
     }
     &-header {

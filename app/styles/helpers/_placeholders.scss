@@ -20,6 +20,9 @@
     &:active {
         text-shadow: 0 0 1px $black, 0 0 1em $white;
     }
+    &:focus {
+        color: $yellow-lite;
+    }
     &:hover {
         color: darken-new($yellow-lite, 25%);
     }

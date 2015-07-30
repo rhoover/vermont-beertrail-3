@@ -13,23 +13,24 @@
 
 <a ng-href="#!/{{spk.brewer.selector}}/dininglist/{{dining.id}}" class="yelp-list-item" ng-repeat="dining in spk.diningList | filter:search:strict  track by $index">
     <img ng-src="{{dining.photo_url_small}}" class="yelp-list-item-image" />
-    <p class="yelp-list-item-details">{{dining.name}}</p>
-    <p class="yelp-list-item-details-small">{{dining.address1}}</p>
-    <p class="yelp-list-item-details-small">{{dining.city}}, {{dining.state}} {{dining.zip}}</p>
+    <p class="yelp-list-item-content">{{dining.name}}</p>
+    <p class="yelp-list-item-content-small">{{dining.address1}}</p>
+    <p class="yelp-list-item-content-small">{{dining.city}}, {{dining.state}} {{dining.zip}}</p>
     <p class="rating" data-rating="{{dining.avg_rating}}">
         <i class="star-1">★</i>
         <i class="star-2">★</i>
         <i class="star-3">★</i>
         <i class="star-4">★</i>
         <i class="star-5">★</i>
+        <br>
         <span class="rating-small">   -from {{dining.review_count}} Reviews(s)</span>
     </p>
 </a>
 
 <a href="http://www.moosedog.io" target="_blank" class="yelp-list-item">
     <div class=" brewer-list-item-image brewer40-moosedog"></div>
-    <p class="brewer-list-item-detail brewer brewer-list-item-detail-small">VT Beer Trail Is Handcrafted By:</p>
-    <p class="brewer-list-item-detail">MooseDog Studios</p>
-    <p class="brewer-list-item-detail brewer-list-item-detail-small">Stowe, VT</p>
+    <p class="brewer-list-item-content brewer brewer-list-item-content-small">VT Beer Trail Is Handcrafted By:</p>
+    <p class="brewer-list-item-content">MooseDog Studios</p>
+    <p class="brewer-list-item-content brewer-list-item-content-small">Stowe, VT</p>
 </a>
 

@@ -24,7 +24,7 @@
     &-list-item {
         @extend %lists;
         @include susy-breakpoint($bp-large, $columns-large) {
-          min-height: rhythm(7, 16px);
+          min-height: rhythm(9, 16px);
           padding-left: 0;
         }
         &-image {
