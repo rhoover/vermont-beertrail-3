@@ -27,6 +27,9 @@
                 @include transition-duration(.75s);
             }
         }
+        &:hover {
+            background: rgba($grey-blue-lite, .1);
+        }
     }
     &-label {
         position: absolute;

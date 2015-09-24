@@ -28,7 +28,7 @@
         <meta name="mobile-web-app-capable" content="yes">
 
         <!-- For Chrome for Android Tool Bar Color -->
-        <meta name="theme-color" theme="#56721C">
+        <meta name="theme-color" content="#56721C">
 
         <!-- For Apple iOS Add To Homescreen and StandAlone Mode-->
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -83,53 +83,41 @@
 
     <!-- build:js(.) scripts/thirdparty.js -->
         <script async src="libs/skycons-html5/skycons.min.js"></script>
+        <script async src="libs/oauth-signature/dist/oauth-signature.min.js"></script>
     <!-- endbuild -->
 
     <!-- build:js(.) scripts/angular-min.js -->
-        <script src="libs/angular/angular.js"></script>
-        <script src="libs/angular-animate/angular-animate.js"></script>
-        <script src="libs/angular-touch/angular-touch.js"></script>
-        <script src="libs/angular-route/angular-route.js"></script>
+        <script src="libs/angular/angular.min.js"></script>
+        <script src="libs/angular-animate/angular-animate.min.js"></script>
+        <script src="libs/angular-touch/angular-touch.min.js"></script>
+        <script src="libs/angular-route/angular-route.min.js"></script>
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/vermont-beertrail.js -->
-         <script src="scripts/app.js"></script>
+       <script src="scripts/app.js"></script>
 
-         <script src="scripts/boot/angular-deps.js"></script>
-         <script src="scripts/boot/routing.js"></script>
-         <script src="scripts/boot/url-hash.js"></script>
-         <script src="scripts/boot/debug-markup.js"></script>
-         <script src="scripts/boot/http-interceptor.js"></script>
-         <script src="scripts/boot/run.js"></script>
+       <script src="scripts/boot/angular-deps.js"></script>
+       <script src="scripts/boot/routing.js"></script>
+       <script src="scripts/boot/url-hash.js"></script>
+       <script src="scripts/boot/debug-markup.js"></script>
+       <script src="scripts/boot/http-interceptor.js"></script>
+       <script src="scripts/boot/run.js"></script>
 
         <script src="scripts/utilities/filters/sort-data-filter.js"></script>
         <script src="scripts/utilities/filters/find-data-filter.js"></script>
 
-         <script src="scripts/utilities/keys/yelp-key.js"></script>
-
-         <script src="scripts/utilities/shared/button-home-directive.js"></script>
-         <script src="scripts/utilities/shared/button-back-directive.js"></script>
-         <script src="scripts/utilities/shared/scroll-to-list-top-directive.js"></script>
-         <script src="scripts/utilities/shared/spinner-factory.js"></script>
-         <script src="scripts/utilities/shared/spinner-directive.js"></script>
-         <script src="scripts/utilities/shared/interceptor-factory.js"></script>
-         <script src="scripts/utilities/shared/page-title-controller.js"></script>
+        <script src="scripts/utilities/shared/button-home-directive.js"></script>
+        <script src="scripts/utilities/shared/button-back-directive.js"></script>
+        <script src="scripts/utilities/shared/scroll-to-list-top-directive.js"></script>
+        <script src="scripts/utilities/shared/spinner-factory.js"></script>
+        <script src="scripts/utilities/shared/spinner-directive.js"></script>
+        <script src="scripts/utilities/shared/interceptor-factory.js"></script>
+        <script src="scripts/utilities/shared/page-title-controller.js"></script>
+        <script src="scripts/utilities/shared/yelp-data-factory.js"></script>
 
         <script src="scripts/utilities/storage/session-storage-factory.js"></script>
 
-        <script src="scripts/views/brewers/brewer-resolve-factory.js"></script>
-         <script src="scripts/views/brewers/brewer-cache-key.js"></script>
-        <script src="scripts/views/brewers/brewer-data-factory.js"></script>
-        <script src="scripts/views/brewers/brewer-list-controller.js"></script>
-        <script src="scripts/views/brewers/brewer-detail-controller.js"></script>
-        <script src="scripts/views/brewers/brewer-detail-resimg-directive.js"></script>
-
-        <script src="scripts/views/dining/dining-resolve-factory.js"></script>
-         <script src="scripts/views/dining/dining-cache-key.js"></script>
-        <script src="scripts/views/dining/dining-data-factory.js"></script>
-        <script src="scripts/views/dining/dining-list-controller.js"></script>
-
-         <script src="scripts/views/home/home-mobile-directive.js"></script>
+        <script src="scripts/views/home/home-mobile-directive.js"></script>
         <script src="scripts/views/home/home-data-prefetch-directive.js"></script>
 
         <script src="scripts/views/maps/shared/map-api-load-service.js"></script>
@@ -142,9 +130,19 @@
         <script src="scripts/views/maps/dining/dining-map-controller.js"></script>
         <script src="scripts/views/maps/shopping/shopping-map-controller.js"></script>
 
+        <script src="scripts/views/brewers/brewer-resolve-factory.js"></script>
+        <script src="scripts/views/brewers/brewer-cache-key.js"></script>
+        <script src="scripts/views/brewers/brewer-data-factory.js"></script>
+        <script src="scripts/views/brewers/brewer-list-controller.js"></script>
+        <script src="scripts/views/brewers/brewer-detail-controller.js"></script>
+        <script src="scripts/views/brewers/brewer-detail-resimg-directive.js"></script>
+
+        <script src="scripts/views/dining/dining-resolve-factory.js"></script>
+         <script src="scripts/views/dining/dining-cache-key.js"></script>
+        <script src="scripts/views/dining/dining-list-controller.js"></script>
+
         <script src="scripts/views/shopping/shopping-resolve-factory.js"></script>
          <script src="scripts/views/shopping/shopping-cache-key.js"></script>
-        <script src="scripts/views/shopping/shopping-data-factory.js"></script>
         <script src="scripts/views/shopping/shopping-list-controller.js"></script>
 
         <script src="scripts/views/weather/forecast-io-key.js"></script>

@@ -1,7 +1,7 @@
 
 <section class="businessmap-header">
     <p class="businessmap-header-text">{{::spk.dining.name}}</p>
-    <p class="businessmap-header-text-small">{{::spk.dining.address1}}, {{::spk.dining.city}}</p>
+    <p class="businessmap-header-text-small">{{::spk.dining.location.address[0]}}, {{::spk.dining.location.city}}  {{::spk.dining.location.state_code}}</p>
 </section>
 
-<section id="businesslocation" class="businessmap" single-marker-map lat={{::spk.dining.latitude}} lon={{::spk.dining.longitude}}></section>
+<section id="businesslocation" class="businessmap" data-single-marker-map lat={{::spk.dining.location.coordinate.latitude}} lon={{::spk.dining.location.coordinate.longitude}}></section>

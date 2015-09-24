@@ -1,22 +1,22 @@
 (function () {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('vtbt3')
-        .controller('ListShoppingCtrl', ListShoppingCtrl);
+  angular
+    .module('vtbt3')
+    .controller('ListShoppingCtrl', ListShoppingCtrl);
 
-    function ListShoppingCtrl($routeParams, storageFactory, sortDataFilter, findDataFilter, shoppingCacheKey, brewerCacheKey) {
+  function ListShoppingCtrl($routeParams, storageFactory, sortDataFilter, findDataFilter, shoppingCacheKey, brewerCacheKey) {
 
-        var spk = this;
+    var spk = this;
 
-        goForthAndBind();
+    goForthAndBind();
 
-        ////////////////
+    ////////////////
 
-        function goForthAndBind() {
+    function goForthAndBind() {
 
-            spk.shoppingList = sortDataFilter.businessSort(storageFactory.getData($routeParams.selector + '-' + shoppingCacheKey).businesses);
-            spk.brewer = findDataFilter.brewerFind(storageFactory.getData(brewerCacheKey), $routeParams.selector);
-        }
+        spk.shoppingList = sortDataFilter.businessSort(storageFactory.getData($routeParams.selector + '-' + shoppingCacheKey).businesses);
+        spk.brewer = findDataFilter.brewerFind(storageFactory.getData(brewerCacheKey), $routeParams.selector);
     }
+  }
 })();

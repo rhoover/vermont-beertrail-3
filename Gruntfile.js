@@ -22,6 +22,7 @@ module.exports = function (grunt) {
 
         beertrail: appConfig,
 
+
         // Watches files for changes and runs tasks based on the changed files
         watch: {
             js: {

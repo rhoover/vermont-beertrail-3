@@ -17,9 +17,9 @@
         ////////////////
 
         function link(scope, element, attrs) {
-            $timeout(function(){
+            angular.element(document).ready(function () {
                 resolveBrewers.brewers();
-            }, 3000);
+            });
         }
     }
 })();

@@ -12,11 +12,11 @@
 <div class="brewer-list-scroller" data-scroll-to-top></div>
 
 <a ng-href="#!/{{spk.brewer.selector}}/shoppinglist/{{shopping.id}}" class="yelp-list-item" ng-repeat="shopping in spk.shoppingList | filter:search:strict  track by $index">
-    <img ng-src="{{shopping.photo_url_small}}" class="yelp-list-item-image" />
+    <img ng-src="{{shopping.image_url}}" class="yelp-list-item-image" />
     <p class="yelp-list-item-content">{{shopping.name}}</p>
-    <p class="yelp-list-item-content-small">{{shopping.address1}}</p>
-    <p class="yelp-list-item-content-small">{{shopping.city}}, {{shopping.state}} {{shopping.zip}}</p>
-    <p class="rating" data-rating="{{shopping.avg_rating}}">
+    <p class="yelp-list-item-content-small">{{shopping.location.display_address[0]}}</p>
+    <p class="yelp-list-item-content-small">{{shopping.location.display_address[1]}}</p>
+    <p class="rating" data-rating="{{shopping.rating}}">
         <i class="star-1">★</i>
         <i class="star-2">★</i>
         <i class="star-3">★</i>

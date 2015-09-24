@@ -16,7 +16,6 @@
         function goForthAndBind() {
             spk.brewer = findDataFilter.brewerFind(storageFactory.getData(brewerCacheKey), $routeParams.selector);
             userLocation.gpsCoords().then(function(position) {
-                console.log(position);
                 $scope.ilat = position.coords.latitude;
                 $scope.ilon = position.coords.longitude;
             });
